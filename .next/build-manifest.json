@@ -30,11 +30,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/card/[id].js"
     ],
-    "/transaction": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/transaction.js"
-    ],
     "/transaction/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

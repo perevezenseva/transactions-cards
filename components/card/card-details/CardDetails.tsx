@@ -6,12 +6,11 @@ const CardDetails = (props: { card: ICard }) => {
   const { card } = props;
   const router = useRouter();
   const { pid } = router.query;
-  console.log("pid", pid);
   return (
-    <div key={card.cardID}>
+    <div className={styles.card} key={card.cardID}>
       <span>{card.cardID}</span>
       <span>{card.cardAccount}</span>
-      <span>{card.maskedCardNumber}</span>
+      <span className={styles.cardNumber}>{card.maskedCardNumber}</span>
       <span>{card.currency}</span>
       <span>{card.expireDate}</span>
       <span>{card.balance}</span>
