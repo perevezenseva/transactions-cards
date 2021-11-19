@@ -1,4 +1,5 @@
 import { ITransaction } from "../../../models/transaction";
+import Link from "next/link";
 
 const TransactionList = (props: { transactions: ITransaction[] }) => {
   const { transactions } = props;
@@ -6,15 +7,19 @@ const TransactionList = (props: { transactions: ITransaction[] }) => {
     <div className="transaction-list">
       {transactions.map((tr) => {
         return (
-          <div>
-            <span>{tr.transactionID}</span>
-            <span>{tr.cardAccount}</span>
-            <span>{tr.cardID}</span>
-            <span>{tr.amount}</span>
-            <span>{tr.currency}</span>
-            <span>{tr.transactionDate}</span>
-            <span>{tr.merchantInfo.name}</span>
-          </div>
+          <Link href={"/transaction/" + tr.cardID} key={tr.transactionID}>
+            <a>
+              <div>
+                <span>{tr.transactionID}</span>
+                <span>{tr.cardAccount}</span>
+                <span>{tr.cardID}</span>
+                <span>{tr.amount}</span>
+                <span>{tr.currency}</span>
+                <span>{tr.transactionDate}</span>
+                <span>{tr.merchantInfo.name}</span>
+              </div>
+            </a>
+          </Link>
         );
       })}
     </div>

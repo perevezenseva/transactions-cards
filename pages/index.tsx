@@ -1,11 +1,9 @@
-import CardList from "../components/card/card-list/CardList";
-import TransactionList from "../components/transaction/transaction-list/TransactionList";
+import React from "react";
 
 function HomePage() {
   return (
-    <div>
-      <CardList cards={[]} />
-      <TransactionList transactions={[]} />
+    <div className="d-flex">
+      
     </div>
   );
 }

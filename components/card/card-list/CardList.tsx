@@ -1,4 +1,5 @@
 import { ICard } from "../../../models/card";
+import Link from "next/link";
 
 const CardList = (props: { cards: ICard[] }) => {
   const { cards } = props;
@@ -6,15 +7,19 @@ const CardList = (props: { cards: ICard[] }) => {
     <div className="card-list">
       {cards.map((cr) => {
         return (
-          <div>
-            <span>{cr.cardID}</span>
-            <span>{cr.cardAccount}</span>
-            <span>{cr.maskedCardNumber}</span>
-            <span>{cr.currency}</span>
-            <span>{cr.expireDate}</span>
-            <span>{cr.balance}</span>
-            <span>{cr.status}</span>
-          </div>
+          <Link href={"/card/" + cr.cardID} key={cr.cardID}>
+            <a>
+              <div key={cr.cardID}>
+                <span>{cr.cardID}</span>
+                <span>{cr.cardAccount}</span>
+                <span>{cr.maskedCardNumber}</span>
+                <span>{cr.currency}</span>
+                <span>{cr.expireDate}</span>
+                <span>{cr.balance}</span>
+                <span>{cr.status}</span>
+              </div>
+            </a>
+          </Link>
         );
       })}
     </div>
