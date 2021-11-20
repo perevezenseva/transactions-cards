@@ -1,10 +1,12 @@
 import { ICard } from "../../../models/card";
 import Link from "next/link";
+import CardFilter from "../card-filter/CardFilter";
 
 const CardList = (props: { cards: ICard[] }) => {
   const { cards } = props;
   return (
     <div className="card-list">
+      <CardFilter />
       {cards.map((cr) => {
         return (
           <Link href={"/card/" + cr.cardID} key={cr.cardID}>

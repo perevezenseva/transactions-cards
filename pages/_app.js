@@ -1,4 +1,5 @@
 import "../styles.scss";
+import 'nextjs-breadcrumbs/dist/index.css';
 import Layout from "../components/layout";
 
 export default function MyApp({ Component, pageProps }) {

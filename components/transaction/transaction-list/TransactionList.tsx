@@ -1,10 +1,12 @@
 import { ITransaction } from "../../../models/transaction";
 import Link from "next/link";
+import TransactionFilter from "../transaction-filter/TransactionFilter";
 
 const TransactionList = (props: { transactions: ITransaction[] }) => {
   const { transactions } = props;
   return (
     <div className="transaction-list">
+      <TransactionFilter />
       {transactions.map((tr) => {
         return (
           <Link href={"/transaction/" + tr.cardID} key={tr.transactionID}>

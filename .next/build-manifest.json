@@ -15,6 +15,11 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -25,15 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/card/[id]": [
+    "/card": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/card/[id].js"
+      "static/chunks/pages/card.js"
     ],
-    "/transaction/[id]": [
+    "/transaction": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/transaction/[id].js"
+      "static/chunks/pages/transaction.js"
     ]
   },
   "ampFirstPages": []
