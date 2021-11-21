@@ -1,0 +1,47 @@
+.listItem {
+    margin: 0.5rem 2rem;
+}
+.itemHeader {
+    display: flex;
+    flex-direction: row;
+}
+.labelData {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    label {
+        font-weight: 600;
+    }
+}
+.creditCard {
+    width: 230px;
+    // height: 120px;
+    box-shadow: 1px 1px #aaa3a3;
+    background-image: linear-gradient(to left, #373b44, #4286f4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 1rem;
+  
+    .cardNumber {
+      display: block;
+      width: 100%;
+      word-spacing: 4px;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: #fff !important;
+      margin-bottom: 20px;
+    }
+    span {
+        color: #fff;
+    }
+    .cardFooter {
+        display: flex;
+        justify-content: space-between;
+        div {
+            color: #fff;
+        }
+    }
+  }
+  

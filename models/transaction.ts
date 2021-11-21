@@ -10,3 +10,16 @@ export interface ITransaction {
     name: string;
   };
 }
+
+export interface ITransactionFilter {
+  cardID?: string;
+  cardAccount?: string;
+  amount?: number;
+  currency?: string;
+  date?: string;
+}
+
+export interface ITransactionPaging {
+  items: ITransaction[];
+  total: number;
+}

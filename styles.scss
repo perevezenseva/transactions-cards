@@ -30,9 +30,6 @@ h4 {
   margin: 20px 0 4px;
   font-weight: 400;
 }
-span {
-  color: red;
-}
 .small {
   font-size: 10px;
   line-height: 18px;
@@ -171,4 +168,57 @@ button:hover {
   td {
     word-break: keep-all;
   }
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  a {
+    padding: 1rem 0;
+    text-align: center;
+    vertical-align: unset;
+    line-height: 18px;
+    font-weight: 400;
+  }
+}
+
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+}
+.pagination > .selected > a {
+  background-color: #4286f4;
+  border-color: #4286f4;
+  color: #fff;
+}
+.pagination > li > a {
+  border: 1px solid #373b44;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .selected > a,
+.pagination > .selected > span,
+.pagination > .selected > a:hover,
+.pagination > .selected > span:hover,
+.pagination > .selected > a:focus,
+.pagination > .selected > span:focus {
+  background-color: #4286f4;
+  border-color: #4286f4;
+  outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #373b44;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: unset;
 }

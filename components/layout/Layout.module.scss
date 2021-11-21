@@ -1,0 +1,9 @@
+.layoutContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .layout {
+        width: 900px;
+    }
+}

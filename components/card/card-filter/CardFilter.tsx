@@ -1,19 +1,10 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
+import { ICardFilter } from "../../../models/card";
 import styles from "./CardFilter.module.scss";
 
-interface CardFilter {
-  cardID?: string;
-  cardAccount?: string;
-  maskedCardNumber?: string;
-  expireDate?: string;
-  currency?: string;
-  status?: string;
-  balance?: string;
-}
-
 const CardFilter = (props: {}) => {
-  const initialValues: CardFilter = {
+  const initialValues: ICardFilter = {
     cardID: null,
     cardAccount: null,
     maskedCardNumber: null,

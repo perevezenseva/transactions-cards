@@ -1,17 +1,10 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
+import { ITransactionFilter } from "../../../models/transaction";
 import styles from "./TransactionFilter.module.scss";
 
-interface TransactionFilter {
-  cardID?: string;
-  cardAccount?: string;
-  amount?: number;
-  currency?: string;
-  date?: string;
-}
-
 const TransactionFilter = (props: {}) => {
-  const initialValues: TransactionFilter = {
+  const initialValues: ITransactionFilter = {
     cardID: null,
     cardAccount: null,
     amount: null,

@@ -1,0 +1,140 @@
+{
+    "items": [
+    {
+        "cardID": "11",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "12",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "13",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "14",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "15",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "16",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "17",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "18",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "19",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "20",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "21",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "22",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "23",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "24",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      },
+      {
+        "cardID": "25",
+        "cardAccount": "A. Perevezenseva",
+        "expireDate": "2021-07-09",
+        "balance": 50,
+        "currency": "AZN",
+        "maskedCardNumber": "3333 3333 3333 3333",
+        "status": "active"
+      }
+    ],
+    "total": 14
+}
