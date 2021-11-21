@@ -1,15 +1,11 @@
-import { ITransaction } from "../../../models/transaction";
+import moment from "moment";
 import Link from "next/link";
-import TransactionFilter from "../transaction-filter/TransactionFilter";
-import React, { useState } from "react";
-import ReactPaginate from 'react-paginate';
-import { PageSize } from "../../../config/pagination";
+import React from "react";
+import { ITransaction } from "../../../models/transaction";
 
-const TransactionList = (props: {
-  transactions: ITransaction[];
-}) => {
+const TransactionList = (props: { transactions: ITransaction[] }) => {
   const { transactions } = props;
- 
+
   return (
     <div className="transaction-list">
       <table>
@@ -34,11 +30,15 @@ const TransactionList = (props: {
                     <a>{tr.transactionID}</a>
                   </Link>
                 </td>
-                <td>{tr.cardID}</td>
+                <td>
+                  <Link href={"/card/" + tr.cardID}>
+                    <a>{tr.cardID}</a>
+                  </Link>
+                </td>
                 <td>{tr.amount}</td>
                 <td>{tr.currency}</td>
                 <td>{tr.cardAccount}</td>
-                <td>{tr.transactionDate}</td>
+                <td>{moment(tr.transactionDate).format("DD.MM.YYYY")}</td>
                 <td>{tr.merchantInfo.name}</td>
               </tr>
             );

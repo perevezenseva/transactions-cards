@@ -25,6 +25,16 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/card": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/card.js"
+    ],
+    "/card/[id]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/card/[id].js"
+    ],
     "/transaction": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

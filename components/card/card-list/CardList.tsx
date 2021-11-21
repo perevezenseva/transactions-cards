@@ -1,10 +1,8 @@
-import { ICard } from "../../../models/card";
+import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
-import CardFilter from "../card-filter/CardFilter";
+import { ICard } from "../../../models/card";
 import styles from "./CardList.module.scss";
-import ReactPaginate from "react-paginate";
-import { PageSize } from "../../../config/pagination";
 
 const CardList = (props: {
   cards: ICard[];
@@ -44,7 +42,7 @@ const CardList = (props: {
                     <div>{cr.cardAccount}</div>
                   </div>
                   <div>
-                    <span>{cr.expireDate}</span>
+                    <span>{moment(cr.expireDate).format('MM/YYYY')}</span>
                   </div>
                 </div>
               </div>

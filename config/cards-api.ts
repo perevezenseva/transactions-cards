@@ -23,7 +23,7 @@ export class CardAPI implements ICardAPI {
         return this.client.get(url, { params: filter }).then(reply => {
             let data = reply.data;
             if(page != null) {
-                data.items = data.items.slice(page * PageSize, PageSize);
+                data.items = data.items.splice(page * PageSize, page * PageSize < data.total ? PageSize: data.total % PageSize);
             }
             return data as ICardPaging;
         });
