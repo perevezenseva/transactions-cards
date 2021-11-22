@@ -9,3 +9,18 @@ export interface ICard {
   status: string;
   balance: number;
 }
+
+export interface ICardFilter {
+  cardID?: string;
+  cardAccount?: string;
+  maskedCardNumber?: string;
+  expireDate?: string;
+  currency?: string;
+  status?: string;
+  balance?: string;
+}
+
+export interface ICardPaging {
+  items: ICard[];
+  total: number;
+}

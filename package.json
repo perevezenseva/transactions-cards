@@ -12,14 +12,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-decorators": "^7.16.4",
     "mobx": "^6.3.7",
     "mobx-react": "^7.2.1",
+=======
+    "axios": "^0.24.0",
+    "formik": "^2.2.9",
+    "moment": "^2.29.1",
+>>>>>>> 82c02db66ea328d954156e233a7ab98a7fa1d024
     "next": "^12.0.4",
     "nextjs-breadcrumbs": "^1.1.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-paginate": "^8.0.0",
     "sass": "^1.43.4"
   },
   "devDependencies": {
