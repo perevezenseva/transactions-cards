@@ -1,4 +1,5 @@
 import { inject, observer } from "mobx-react";
+import { useRouter } from "next/dist/client/router";
 import React, { useEffect, useState } from "react";
 import CardLayout from "../../components/card/card-layout/CardLayout";
 import api from "../../config/api";
@@ -22,7 +23,7 @@ const Card = inject("FiltersStore")(
 
     useEffect(() => {
       fetchData(0);
-    }, []);
+    }, [cardFilter]);
 
     if (loading) {
       return <span>Loading...</span>;

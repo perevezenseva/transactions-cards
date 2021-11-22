@@ -29,9 +29,23 @@ export class TransactionAPI implements ITransactionAPI {
     let url = URL_TRANSACTIONS;
     return this.client.get(url, { params: filter }).then((reply) => {
       let data = reply.data;
-      if (filter && filter.cardID) {
-        data.items = data.items.filter((c) => c.cardID == filter.cardID);
-      }
+      if(filter) {
+        if (filter.cardID) {
+          data.items = data.items.filter((c) => c.cardID == filter.cardID);
+        }
+        if (filter.cardAccount) {
+          data.items = data.items.filter((c) => c.cardAccount.includes(filter.cardAccount));
+        }
+        if (filter.amount) {
+          data.items = data.items.filter((c) => c.amount == filter.amount);
+        }
+        if (filter.currency) {
+          data.items = data.items.filter((c) => c.currency == filter.currency);
+        }
+        if (filter.date) {
+          data.items = data.items.filter((c) => c.transactionDate == filter.date);
+        }
+      }      
       data.total = data.items.length;
       if (page != null) {
         data.items = data.items.splice(

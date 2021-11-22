@@ -14,7 +14,7 @@
         "cardAccount": "A. Perevezenseva",
         "expireDate": "2021-07-09",
         "balance": 50,
-        "currency": "AZN",
+        "currency": "USD",
         "maskedCardNumber": "3333 3333 3333 3333",
         "status": "active"
       },
@@ -23,7 +23,7 @@
         "cardAccount": "A. Perevezenseva",
         "expireDate": "2021-07-09",
         "balance": 50,
-        "currency": "AZN",
+        "currency": "EUR",
         "maskedCardNumber": "3333 3333 3333 3333",
         "status": "active"
       },
@@ -59,7 +59,7 @@
         "cardAccount": "A. Perevezenseva",
         "expireDate": "2021-07-09",
         "balance": 50,
-        "currency": "AZN",
+        "currency": "EUR",
         "maskedCardNumber": "3333 3333 3333 3333",
         "status": "active"
       },

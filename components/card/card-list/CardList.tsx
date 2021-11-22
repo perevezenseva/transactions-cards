@@ -4,13 +4,10 @@ import Link from "next/link";
 import { ICard } from "../../../models/card";
 import styles from "./CardList.module.scss";
 
-const CardList = (props: {
-  cards: ICard[];
-}) => {
+const CardList = (props: { cards: ICard[] }) => {
   const { cards } = props;
   return (
     <div className="card-list">
-      
       <div className={styles.cardList}>
         {cards.map((cr) => {
           return (
@@ -33,19 +30,25 @@ const CardList = (props: {
                   <span>{cr.balance}</span>
                 </div>
               </div>
-              <div className={styles.creditCard} key={cr.cardID}>
-                <Image src="/chip.png" width={30} height={30} />
-                <span className={styles.cardNumber}>{cr.maskedCardNumber}</span>
-                <div className={styles.cardFooter}>
-                  <div>
-                    <div>{cr.currency}</div>
-                    <div>{cr.cardAccount}</div>
+              <Link href={"/card/" + cr.cardID}>
+                <a>
+                  <div className={styles.creditCard} key={cr.cardID}>
+                    <Image src="/chip.png" width={30} height={30} />
+                    <span className={styles.cardNumber}>
+                      {cr.maskedCardNumber}
+                    </span>
+                    <div className={styles.cardFooter}>
+                      <div>
+                        <div>{cr.currency}</div>
+                        <div>{cr.cardAccount}</div>
+                      </div>
+                      <div>
+                        <span>{moment(cr.expireDate).format("MM/YYYY")}</span>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <span>{moment(cr.expireDate).format('MM/YYYY')}</span>
-                  </div>
-                </div>
-              </div>
+                </a>
+              </Link>
             </div>
           );
         })}

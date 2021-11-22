@@ -22,6 +22,20 @@ export class CardAPI implements ICardAPI {
     let url = URL_CARDS;
     return this.client.get(url, { params: filter }).then((reply) => {
       let data = reply.data;
+      if (filter) {
+        if(filter.cardID) {
+          data.items = data.items.filter((c) => c.cardID == filter.cardID);
+        }
+        if(filter.cardAccount) {
+          data.items = data.items.filter((c) => c.cardAccount.includes(filter.cardAccount));
+        }
+        if(filter.currency) {
+          data.items = data.items.filter((c) => c.currency == filter.currency);
+        }
+        if(filter.status) {
+          data.items = data.items.filter((c) => c.status == filter.status);
+        }
+      }
       data.total = data.items.length;
       if (page != null) {
         data.items = data.items.splice(

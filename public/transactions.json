@@ -24,7 +24,7 @@
       "transactionID": "13",
       "transactionDate": "2021-07-09",
       "amount": 50,
-      "currency": "AZN",
+      "currency": "USD",
       "merchantInfo": { "id": "1", "name": "Test" }
     },
     {
@@ -78,7 +78,7 @@
       "transactionID": "19",
       "transactionDate": "2021-07-09",
       "amount": 50,
-      "currency": "AZN",
+      "currency": "EUR",
       "merchantInfo": { "id": "1", "name": "Test" }
     },
     {
@@ -96,7 +96,7 @@
       "transactionID": "21",
       "transactionDate": "2021-07-09",
       "amount": 50,
-      "currency": "AZN",
+      "currency": "USD",
       "merchantInfo": { "id": "1", "name": "Test" }
     },
     {

@@ -24,7 +24,7 @@ const TransactionPage = inject("FiltersStore")(
 
     useEffect(() => {
       fetchData(0);
-    }, []);
+    }, [transactionFilter]);
 
     if (loading) {
       return <span>Loading...</span>;

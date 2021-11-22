@@ -13,11 +13,8 @@ export interface ICard {
 export interface ICardFilter {
   cardID?: string;
   cardAccount?: string;
-  maskedCardNumber?: string;
-  expireDate?: string;
   currency?: string;
   status?: string;
-  balance?: string;
 }
 
 export interface ICardPaging {

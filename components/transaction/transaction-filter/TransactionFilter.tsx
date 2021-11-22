@@ -5,9 +5,9 @@ import { ITransactionFilter } from "../../../models/transaction";
 import styles from "./TransactionFilter.module.scss";
 
 const TransactionFilter = inject("FiltersStore")(
-  observer((props: { FiltersStore?: any})  => {
-    const { FiltersStore } = props;
-    const initialValues: ITransactionFilter = FiltersStore.transactionFilter;
+  observer((props: { FiltersStore?: any, cardID?: string})  => {
+    const { FiltersStore, cardID } = props;
+    const initialValues: ITransactionFilter = {...FiltersStore.transactionFilter, cardID: cardID ? cardID: FiltersStore.transactionFilter.cardID};
     return (
       <div className="transaction-filter">
         <Formik

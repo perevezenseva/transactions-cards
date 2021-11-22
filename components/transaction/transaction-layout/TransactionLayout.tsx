@@ -1,3 +1,4 @@
+import { useRouter } from "next/dist/client/router";
 import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import { PageSize } from "../../../config/pagination";
@@ -15,7 +16,7 @@ const TransactionLayout = (props: {
   const [page, setPage] = useState(0);
   return (
     <>
-      <TransactionFilter />
+      <TransactionFilter cardID={cardID}/>
       <TransactionList transactions={transactions} cardID={cardID}/>
       <ReactPaginate
         breakLabel="..."
