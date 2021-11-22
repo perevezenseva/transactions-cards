@@ -88,12 +88,15 @@ input[type="date"]::-webkit-inner-spin-button {
 input[type="time"]::-webkit-inner-spin-button {
   margin: 2px 22px 0 0;
 }
+.input[type="date"] {
+  position: relative;
+}
 .day-visited i,
 .time-visited i,
 input[type="date"]::-webkit-calendar-picker-indicator {
-  position: absolute;
-  top: 8px;
-  font-size: 20px;
+  // position: absolute;
+  // top: 8px;
+  // font-size: 20px;
 }
 .day-visited i,
 .time-visited i {
@@ -104,7 +107,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 [type="date"]::-webkit-calendar-picker-indicator {
   right: 0;
   z-index: 2;
-  opacity: 0;
+  // opacity: 0;
 }
 .question-answer label {
   display: block;

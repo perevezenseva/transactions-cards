@@ -3,6 +3,8 @@ import React from "react";
 import { Provider } from "mobx-react";
 import { fetchInitialStoreState, DataStore } from "../stores/DataStore";
 import Layout from "./../components/layout";
+import "../styles.scss";
+import "nextjs-breadcrumbs/dist/index.css";
 
 class MyApp extends App {
   state = {
