@@ -5,7 +5,8 @@ import { ITransactionFilter } from "../../../models/transaction";
 import styles from "./TransactionFilter.module.scss";
 
 const TransactionFilter = inject("FiltersStore")(
-  observer(({ FiltersStore }) => {
+  observer((props: { FiltersStore?: any})  => {
+    const { FiltersStore } = props;
     const initialValues: ITransactionFilter = FiltersStore.transactionFilter;
     return (
       <div className="transaction-filter">

@@ -5,7 +5,8 @@ import { ICardFilter } from "../../../models/card";
 import styles from "./CardFilter.module.scss";
 
 const CardFilter = inject("FiltersStore")(
-  observer(({ FiltersStore }) => {
+  observer((props: { FiltersStore?: any }) => {
+    const { FiltersStore } = props;
     const initialValues: ICardFilter = FiltersStore.cardFilter;
     return (
       <div className="card-filter">
