@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import App from "next/app";
 import React from "react";
 import { Provider } from "mobx-react";
@@ -37,17 +36,5 @@ class MyApp extends App {
       </Provider>
     );
   }
-=======
-import "../styles.scss";
-import 'nextjs-breadcrumbs/dist/index.css';
-import Layout from "../components/layout";
-
-export default function MyApp({ Component, pageProps }) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
->>>>>>> 82c02db66ea328d954156e233a7ab98a7fa1d024
 }
 export default MyApp;
