@@ -1,7 +1,3 @@
-import React from "react";
+import TransactionPage from "./transaction";
 
-function HomePage() {
-  return <div className="d-flex"></div>;
-}
-
-export default HomePage;
+export default TransactionPage;

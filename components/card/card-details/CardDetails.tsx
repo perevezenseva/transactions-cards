@@ -6,10 +6,11 @@ import moment from "moment";
 import React from "react";
 import Link from "next/link";
 
-const CardDetails = (props: { card: ICard }) => {
-  const { card } = props;
-  const router = useRouter();
-  const { pid } = router.query;
+const CardDetails = (props: { card: ICard; transactionID: string }) => {
+  const { card, transactionID } = props;
+  if (!card) {
+    return <span>Not found...</span>;
+  }
   return (
     <div>
       <div>
@@ -30,9 +31,11 @@ const CardDetails = (props: { card: ICard }) => {
         </div>
       </div>
       <div>
-        <Link href={"/transaction/" + card.cardID}>
-          <a>Transaction list</a>
-        </Link>
+        {!transactionID && (
+          <Link href={"/card/" + card.cardID + "/transaction/"}>
+            <a>Transaction list</a>
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -3,33 +3,44 @@ import Link from "next/link";
 import React from "react";
 import { ITransaction } from "../../../models/transaction";
 
-const TransactionDetails = (props: { transaction: ITransaction }) => {
-  const { transaction } = props;
+const TransactionDetails = (props: {
+  transaction: ITransaction;
+  cardID?: string;
+}) => {
+  const { transaction, cardID } = props;
+  if (!transaction) {
+    return <span>Not found...</span>;
+  }
   return (
     <table>
       <thead>
-        <th>Transaction ID</th>
-        <th>Card ID</th>
-        <th>Amount</th>
-        <th>Currency</th>
-        <th>Card account</th>
-        <th>Transaction date</th>
-        <th>Merchant name</th>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Card ID</th>
+          <th>Amount</th>
+          <th>Currency</th>
+          <th>Card account</th>
+          <th>Transaction date</th>
+          <th>Merchant name</th>
+        </tr>
       </thead>
       <tbody>
         <tr key={transaction.transactionID}>
+          <td>{transaction.transactionID}</td>
           <td>
-            <Link
-              href={"/transaction/" + transaction.cardID}
-              key={transaction.transactionID}
-            >
-              <a>{transaction.transactionID}</a>
-            </Link>
-          </td>
-          <td>
-            <Link href={"/card/" + transaction.cardID}>
-              <a>{transaction.cardID}</a>
-            </Link>
+            {!cardID && (
+              <Link
+                href={
+                  "/transaction/" +
+                  transaction.transactionID +
+                  "/" +
+                  transaction.cardID
+                }
+              >
+                <a>{transaction.cardID}</a>
+              </Link>
+            )}
+            {cardID && <>{transaction.cardID}</>}
           </td>
           <td>{transaction.amount}</td>
           <td>{transaction.currency}</td>
