@@ -27,12 +27,14 @@ const TransactionPage = inject("FiltersStore")(
       fetchData(0);
     }, [transactionFilter]);
 
+    if (loading) {
+      return <span>Loading...</span>;
+    }
     return (
       <>
         <TransactionLayout
           transactions={transactions}
           pagingOptions={pagingOptions}
-          loading={loading}
           fetchData={fetchData}
         />
       </>

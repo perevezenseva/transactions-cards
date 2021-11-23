@@ -35,12 +35,14 @@ const CardTransactions = inject("FiltersStore")(
       fetchData(0);
     }, [cid, transactionFilter]);
 
+    if (loading) {
+      return <span>Loading...</span>;
+    }
     return (
       <TransactionLayout
         transactions={transactions}
         pagingOptions={pagingOptions}
         fetchData={fetchData}
-        loading={loading}
         cardID={cid as string}
       />
     );

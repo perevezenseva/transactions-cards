@@ -8,16 +8,14 @@ import CardList from "../card-list/CardList";
 const CardLayout = (props: {
   cards: ICard[];
   pagingOptions: { total: number; page: number };
-  loading: boolean;
   fetchData: (page?: number, filter?: ICardFilter) => void;
   transactionID?: string;
 }) => {
-  const { cards, pagingOptions, loading, fetchData } = props;
+  const { cards, pagingOptions, fetchData } = props;
   return (
     <>
       <CardFilter />
-      {!loading && <CardList cards={cards} />}
-      {loading && <span>Loading...</span>}
+      <CardList cards={cards} />
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"

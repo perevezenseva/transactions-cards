@@ -9,18 +9,14 @@ import TransactionList from "../transaction-list/TransactionList";
 const TransactionLayout = (props: {
   transactions: ITransaction[];
   pagingOptions: { total: number; page: number };
-  loading: boolean;
   fetchData: (page?: number, filter?: ITransactionFilter) => void;
   cardID?: string;
 }) => {
-  const { transactions, pagingOptions, loading, cardID, fetchData } = props;
+  const { transactions, pagingOptions, cardID, fetchData } = props;
   return (
     <>
       <TransactionFilter cardID={cardID} />
-      {!loading && (
-        <TransactionList transactions={transactions} cardID={cardID} />
-      )}
-      {loading && <span>Loading...</span>}
+      <TransactionList transactions={transactions} cardID={cardID} />
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"

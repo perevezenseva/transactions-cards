@@ -26,11 +26,14 @@ const Card = inject("FiltersStore")(
       fetchData(0);
     }, [cardFilter]);
 
+    if (loading) {
+      return <span>Loading...</span>;
+    }
+
     return (
       <CardLayout
         cards={cards}
         pagingOptions={pagingOptions}
-        loading={loading}
         fetchData={fetchData}
       />
     );
