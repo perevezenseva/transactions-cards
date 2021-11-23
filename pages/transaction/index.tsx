@@ -9,6 +9,7 @@ const TransactionPage = inject("FiltersStore")(
     const [loading, setLoading] = useState(false);
     const [pagingOptions, setPagingOptions] = useState({
       total: 0,
+      page: 0,
     });
     const transactionFilter = FiltersStore.transactionFilter;
     const fetchData = (page: number) => {
@@ -17,7 +18,7 @@ const TransactionPage = inject("FiltersStore")(
         .query_transactions(page, transactionFilter)
         .then((data) => {
           setTransaction(data ? data.items : []);
-          setPagingOptions({ total: data.total });
+          setPagingOptions({ total: data.total, page: page });
           setLoading(false);
         });
     };

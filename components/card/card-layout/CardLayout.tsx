@@ -7,12 +7,11 @@ import CardList from "../card-list/CardList";
 
 const CardLayout = (props: {
   cards: ICard[];
-  pagingOptions: { total: number };
+  pagingOptions: { total: number; page: number };
   fetchData: (page?: number, filter?: ICardFilter) => void;
   transactionID?: string;
 }) => {
   const { cards, pagingOptions, fetchData } = props;
-  const [page, setPage] = useState(0);
   return (
     <>
       <CardFilter />
@@ -21,14 +20,13 @@ const CardLayout = (props: {
         breakLabel="..."
         nextLabel=">"
         onPageChange={(page: { selected: number }) => {
-          setPage(page.selected);
           fetchData(page.selected);
         }}
         pageRangeDisplayed={PageSize}
         pageCount={Math.ceil(pagingOptions.total / PageSize)}
         previousLabel="<"
         renderOnZeroPageCount={null}
-        forcePage={page}
+        forcePage={pagingOptions.page}
         containerClassName="pagination"
       />
     </>

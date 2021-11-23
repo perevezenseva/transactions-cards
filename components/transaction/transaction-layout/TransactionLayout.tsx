@@ -8,28 +8,26 @@ import TransactionList from "../transaction-list/TransactionList";
 
 const TransactionLayout = (props: {
   transactions: ITransaction[];
-  pagingOptions: { total: number };
+  pagingOptions: { total: number, page: number };
   fetchData: (page?: number, filter?: ITransactionFilter) => void;
   cardID?: string;
 }) => {
   const { transactions, pagingOptions, cardID, fetchData } = props;
-  const [page, setPage] = useState(0);
   return (
     <>
-      <TransactionFilter cardID={cardID}/>
-      <TransactionList transactions={transactions} cardID={cardID}/>
+      <TransactionFilter cardID={cardID} />
+      <TransactionList transactions={transactions} cardID={cardID} />
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"
         onPageChange={(page: { selected: number }) => {
-          setPage(page.selected);
           fetchData(page.selected);
         }}
         pageRangeDisplayed={PageSize}
         pageCount={Math.ceil(pagingOptions.total / PageSize)}
         previousLabel="<"
         renderOnZeroPageCount={null}
-        forcePage={page}
+        forcePage={pagingOptions.page}
         containerClassName="pagination"
       />
     </>
