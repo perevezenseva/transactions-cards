@@ -8,29 +8,3 @@
   }
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  .navLink {
-    border-radius: unset;
-    color: #000;
-    border-bottom: 2px solid #7a96ea;
-    outline: none;
-    box-shadow: none;
-    font-family: SF-UI, sans-serif;
-    font-size: 1.15rem;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.46px;
-    line-height: normal;
-    text-align: left;
-    padding: 8px;
-    white-space: nowrap;
-    margin: 0 1rem 0 0;
-    a {
-      color: #095484;
-    }
-  }
-}

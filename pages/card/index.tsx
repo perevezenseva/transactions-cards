@@ -10,7 +10,7 @@ const Card = inject("FiltersStore")(
     const [loading, setLoading] = useState(false);
     const [pagingOptions, setPagingOptions] = useState({
       total: 0,
-      page: 0
+      page: 0,
     });
     const cardFilter = FiltersStore.cardFilter;
     const fetchData = (page: number) => {
@@ -26,13 +26,11 @@ const Card = inject("FiltersStore")(
       fetchData(0);
     }, [cardFilter]);
 
-    if (loading) {
-      return <span>Loading...</span>;
-    }
     return (
       <CardLayout
         cards={cards}
         pagingOptions={pagingOptions}
+        loading={loading}
         fetchData={fetchData}
       />
     );
