@@ -7,13 +7,17 @@ export default function Layout({ children }) {
   return (
     <div className={styles.layoutContainer}>
       <div className={styles.layout}>
-        <div className="navbar">
-          <Link href="/transaction">
-            <a>{"Transactions"}</a>
-          </Link>
-          <Link href="/card">
-            <a>{"Cards"}</a>
-          </Link>
+        <div className={styles.navbar}>
+          <div className={styles.navLink}>
+            <Link href="/transaction">
+              <a>{"Transactions"}</a>
+            </Link>
+          </div>
+          <div className={styles.navLink}>
+            <Link href="/card">
+              <a>{"Cards"}</a>
+            </Link>
+          </div>
         </div>
         <Breadcrumbs useDefaultStyle rootLabel="Home" />
         <main>{children}</main>

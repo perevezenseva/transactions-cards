@@ -3,7 +3,7 @@ import React from "react";
 import { initializeStore, Store } from "../stores/stores";
 import { Provider } from "mobx-react";
 import "../styles.scss";
-import "nextjs-breadcrumbs/dist/index.css";
+import "../breadcrumbs.css";
 import Layout from "../components/layout";
 
 class MyApp extends App {

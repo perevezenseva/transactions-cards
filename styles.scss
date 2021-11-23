@@ -177,19 +177,10 @@ a {
   text-decoration: none;
 }
 
-.navbar {
-  display: flex;
-  margin-top: 1rem;
-  margin-left: 2.5rem;
-  a {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    vertical-align: unset;
-    line-height: 18px;
-    font-weight: 400;
-    background-color: #eee;
-  }
+ol,
+ul {
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .pagination {
