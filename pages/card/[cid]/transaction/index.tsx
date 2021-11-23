@@ -11,6 +11,7 @@ const CardTransactions = () => {
   const [loading, setLoading] = useState(false);
   const [pagingOptions, setPagingOptions] = useState({
     total: 0,
+    page: 0,
   });
 
   const fetchData = (page: number) => {
@@ -19,7 +20,7 @@ const CardTransactions = () => {
       .query_transactions(page, { cardID: cid as string })
       .then((data) => {
         setTransaction(data ? data.items : []);
-        setPagingOptions({ total: data.total });
+        setPagingOptions({ total: data.total, page: page });
         setLoading(false);
       });
   };
